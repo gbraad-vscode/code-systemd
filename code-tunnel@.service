@@ -3,6 +3,7 @@ Description=Code Tunnel Service
 After=network.target
 
 [Service]
+Environment="DONT_PROMPT_WSL_INSTALL=1"
 ExecStart=/usr/bin/code tunnel --accept-server-license-terms --name %H
 Restart=always
 User=%i
