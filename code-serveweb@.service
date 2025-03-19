@@ -3,6 +3,7 @@ Description=Code Serve Web Service
 After=network.target
 
 [Service]
+Environment="DONT_PROMPT_WSL_INSTALL=1"
 ExecStart=/usr/bin/code serve-web --without-connection-token --host 0.0.0.0
 Restart=always
 User=%i
