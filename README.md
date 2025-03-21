@@ -21,7 +21,7 @@ rm -f ${tempfile}
 sudo curl -fsSL https://raw.githubusercontent.com/gbraad-vscode/codecli-systemd/refs/heads/main/code-serveweb%40.service \
   -o /etc/systemd/system/code-serveweb@.service
 sudo curl -fsSL https://raw.githubusercontent.com/gbraad-vscode/codecli-systemd/refs/heads/main/code-tunnel%40.service   \
-  -o /etc/systemd/system/code-tunnelb@.service
+  -o /etc/systemd/system/code-tunnel@.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now code-serveweb@${USER}
 ```
