@@ -47,3 +47,6 @@ curl -fsSL  https://raw.githubusercontent.com/gbraad-vscode/codecli-systemd/refs
 systemctl --user daemon-reload
 systemctl --user enable --now code-serveweb
 ```
+
+> [!NOTE]
+> You might need to run `loginctl enable-linger ${USER}` to allow processes to remain running after you log out.
