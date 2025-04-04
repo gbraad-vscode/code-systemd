@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Environment="DONT_PROMPT_WSL_INSTALL=1"
-ExecStart=code serve-web --without-connection-token --host 0.0.0.0
+ExecStart=%h/.local/bin/code serve-web --without-connection-token --host 0.0.0.0
 Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

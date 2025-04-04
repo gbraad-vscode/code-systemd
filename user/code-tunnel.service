@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Environment="DONT_PROMPT_WSL_INSTALL=1"
-ExecStart=code tunnel --accept-server-license-terms --name %H
+ExecStart=%h/.local/bin/code tunnel --accept-server-license-terms --name %H
 Restart=always
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

@@ -40,6 +40,7 @@ sudo systemctl enable --now code-serveweb@${USER}
 
 #### Services (user)
 ```bash
+mdkir -p ~/.config/systemd/user/
 curl -fsSL  https://raw.githubusercontent.com/gbraad-vscode/codecli-systemd/refs/heads/main/user/code-serveweb.service \
   -o ~/.config/systemd/user/code-serveweb.service
 curl -fsSL  https://raw.githubusercontent.com/gbraad-vscode/codecli-systemd/refs/heads/main/user/code-tunnel.service   \
