@@ -1,0 +1,10 @@
+[Unit]
+Description=Codium Server
+After=network.target
+
+[Service]
+ExecStart=%h/.local/bin/codium-server --without-connection-token --host 0.0.0.0
+Restart=always
+
+[Install]
+WantedBy=default.target

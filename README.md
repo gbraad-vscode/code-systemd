@@ -4,7 +4,7 @@ Systemd services for `code`
 Run code-cli serve web or tunnel using systemd. This has been part of my [`devenv`](https://github.com/gbraad-devenv/) installs, [`code-serveweb-action`](https://github.com/gbraad-actions/code-serveweb-action), and [`code-tunnel-action`](https://github.com/gbraad-actions/code-tunnel-action) actions.
 
 
-### Install
+### Install Code
 
 #### [Install `code`](https://github.com/gbraad-dotfiles/upstream/blob/main/zsh/.zshrc.d/code.zsh)
 ```bash
@@ -51,3 +51,18 @@ systemctl --user enable --now code-serveweb
 
 > [!NOTE]
 > You might need to run `loginctl enable-linger ${USER}` to allow processes to remain running after you log out.
+
+
+### Install Codium Server
+
+
+Download the latest version as described in [this commit](https://github.com/gbraad-dotfiles/upstream/commit/9f186490077e03f89e5853ce61fea1097fc21f87#diff-2f571aaa8c76bed87f54f6ff849b8b7dca279829a5ab56bfdca488687382b5c9) and related [issue](https://github.com/gbraad-devenv/fedora/issues/77).
+
+#### Services (user)
+```bash
+mkdir -p ~/.config/systemd/user/
+curl -fsSL  https://raw.githubusercontent.com/gbraad-vscode/code-systemd/refs/heads/main/codium-user/codium-server.service \
+  -o ~/.config/systemd/user/codium-server.service
+systemctl --user daemon-reload
+systemctl --user enable --now codium-server
+```
