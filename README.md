@@ -55,8 +55,17 @@ systemctl --user enable --now code-serveweb
 
 ### Install Codium Server
 
-
 Download the latest version as described in [this commit](https://github.com/gbraad-dotfiles/upstream/commit/9f186490077e03f89e5853ce61fea1097fc21f87#diff-2f571aaa8c76bed87f54f6ff849b8b7dca279829a5ab56bfdca488687382b5c9) and related [issue](https://github.com/gbraad-devenv/fedora/issues/77).
+
+
+#### Services (system)
+```bash
+curl -fsSL  https://raw.githubusercontent.com/gbraad-vscode/code-systemd/refs/heads/main/codium-system/codium-server%40.service \
+  -o /etc/systemd/system/codium-server@.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now codium-server@${USER}
+```
+
 
 #### Services (user)
 ```bash

@@ -1,0 +1,11 @@
+[Unit]
+Description=Codium Server
+After=network.target
+
+[Service]
+ExecStart=/opt/codium/latest/bin/codium-server --without-connection-token --host 0.0.0.0
+Restart=always
+User=%i
+
+[Install]
+WantedBy=multi-user.target
