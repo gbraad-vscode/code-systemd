@@ -1,7 +1,7 @@
 Systemd services for `code` / `codium`
 ======================================
 
-Run code-cli serve web or tunnel using systemd. This has been part of my [`devenv`](https://github.com/gbraad-devenv/) installs, [`code-serveweb-action`](https://github.com/gbraad-actions/code-serveweb-action), and [`code-tunnel-action`](https://github.com/gbraad-actions/code-tunnel-action) actions.
+Run `code tunnel`, `code serve-web`  or `codium serve-web` using systemd. This has been part of my [`devenv`](https://github.com/gbraad-devenv/) installs, [`code-serveweb-action`](https://github.com/gbraad-actions/code-serveweb-action), and [`code-tunnel-action`](https://github.com/gbraad-actions/code-tunnel-action) actions.
 
 
 ### Install Code
