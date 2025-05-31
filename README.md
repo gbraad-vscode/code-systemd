@@ -22,7 +22,7 @@ rm -f ${tempfile}
 target_arch="x64"      # "arm64"
 tempfile=$(mktemp)
 curl -fsSL "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-${target_arch}" -o ${tempfile}
-rpm -ivh ${tempfile}
+sudo yum install -y ${tempfile}
 rm -f ${tempfile}
 ```
 
