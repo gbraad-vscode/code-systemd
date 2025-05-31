@@ -21,9 +21,9 @@ rm -f ${tempfile}
 ```bash
 target_arch="x64"      # "arm64"
 tempfile=$(mktemp)
-curl -fsSL "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-${target_arch}" -o ${tempfile}
-sudo yum install -y ${tempfile}
-rm -f ${tempfile}
+curl -fsSL "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-${target_arch}" -o ${tempfile}.rpm
+sudo dnf install -y ${tempfile}.rpm
+rm -f ${tempfile}.rpm
 ```
 
 
